@@ -31,7 +31,7 @@ ssh-keygen -t rsa -b 4096 -C "user@email.com"
 cat ~/.ssh/id_rsa.pub
 ```
 
-# Adicionar hostname
+## Adicionar hostname
 
 Abra o arquivo como administrador:
 ```
@@ -42,7 +42,7 @@ Adicione:
 ```
 192.168.99.2 docker.dev
 ```
-# Acessando seus arquivoss
+## Acessando seus arquivos
 
 Abra um CMD e monte o caminho remoto:
 ```
