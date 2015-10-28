@@ -19,8 +19,9 @@ alias dssh='ssh -i ~/.docker/machine/machines/default/id_rsa -p 2222 docker@127.
 ## Configurando seu boot2docker
 Execute esse comando dentro do boot2docker (irá pedir seu usuário do Windows):
 ```
-sudo su
-wget -qO- https://raw.githubusercontent.com/pierophp/boot2docker/master/install.sh | sh
+sudo wget https://raw.githubusercontent.com/pierophp/boot2docker/master/install.sh -O /install.sh
+sudo chmod +x /install.sh
+sudo /install.sh
 ```
 
 ## Gerar chave SSH
