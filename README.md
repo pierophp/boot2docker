@@ -1,5 +1,12 @@
 # Docker no Windows
 
+## Introdução
+Para rodar o docker no Windows com performance, o segredo é deixar os arquivos dentro do container.
+Para acessar seus arquivos é utilizado um compartilhamento samba.
+Como existe a possibilidade da sua VM corromper, é feito um backup da sua /home/docker a cada 10 minutos na sua pasta pessoal no Windows na pasta "docker_bkp".
+Nesse script também é instalado o docker-compose que não vem instalado por padrão no boot2docker para Windows.
+Além disso, por padrão o /home/docker é perdido a cada reboot, esse script também corrigi isso.
+
 ## Instalação
 
 Instale:
