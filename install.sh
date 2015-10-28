@@ -29,7 +29,7 @@ sudo chmod +x /mnt/sda1/bin/docker-compose
 #baixa o script
 echo "Baixando bootlocal.sh"
 wget https://raw.githubusercontent.com/pierophp/boot2docker/master/templates/bootlocal.sh -O /home/docker/bootlocal.sh
-mv bootlocal.sh /var/lib/boot2docker/bootlocal.sh
+mv /home/docker/bootlocal.sh /var/lib/boot2docker/bootlocal.sh
 chmod +x /var/lib/boot2docker/bootlocal.sh
 
 #RSYNC Script
@@ -38,7 +38,7 @@ wget https://raw.githubusercontent.com/pierophp/boot2docker/master/templates/rsy
 chmod +x /home/docker/rsync.sh
 
 echo "Mudando proprietário da home"
-chown -R docker:docker  //home/docker
+chown -R docker:docker /mnt/sda1/home/docker
 
 #Download Crontab
 echo "Download crontab"
