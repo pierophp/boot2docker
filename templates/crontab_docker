@@ -1,0 +1,10 @@
+# Ativa o rsync para o backup dos arquivos
+*/10 * * * * /bin/sh -c '/home/docker/rsync.sh >> /var/log/rsync'
+
+#Inicia container SAMBA
+*/1 * * * * docker ps -a | grep samba || docker run --name samba -p 139:139 -p 445:445 -v /home/docker:/docker -d dperson/samba -s "docker;/docker;no;no;yes"
+*/1 * * * * docker ps | grep samba || docker restart samba
+
+#Inicia container RSYNC
+*/1 * * * * docker ps -a | grep rsync || docker run --name rsync -v /home/docker:/home/docker -v /c/docker_bkp:/home/docker_bkp -d bfosberry/rsync
+*/1 * * * * docker ps | grep rsync || docker restart rsync
