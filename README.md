@@ -1,7 +1,7 @@
 # Docker no Windows
 
 ## Introdução
-Para rodar o docker no Windows com performance, o segredo é deixar os arquivos dentro do container.
+Para rodar o docker no Windows com performance, o segredo é deixar os arquivos dentro do Virtual BOx.
 
 Para acessar seus arquivos é utilizado um compartilhamento samba.
 
