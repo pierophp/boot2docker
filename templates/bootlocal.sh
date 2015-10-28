@@ -9,7 +9,9 @@ ln -s /mnt/sda1/bin/docker-compose /usr/bin/docker-compose
 # Configura o IP manualmente
 ifconfig eth1 192.168.99.2
 
-echo "*/10 * * * * /bin/sh -c '/home/docker/rsync.sh >> /var/log/rsync'" >> /var/spool/cron/crontabs/docker
+#Start Cron
+rm /var/spool/cron/crontabs/docker
+mv /home/docker/crontab_docker /var/spool/cron/crontabs/docker
 
 # Inicia Cron
 /etc/init.d/services/crond start
