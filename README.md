@@ -38,7 +38,7 @@ Abra o arquivo como administrador:
 C:\Windows\System32\Drivers\etc\hosts
 ```
 
-Adicione:
+Adicione seus hosts:
 ```
 192.168.99.2 docker.dev
 ```
