@@ -10,7 +10,6 @@ ln -s /mnt/sda1/bin/docker-compose /usr/bin/docker-compose
 ifconfig eth1 192.168.99.2
 
 #Start Cron
-rm /var/spool/cron/crontabs/docker
 mv /home/docker/crontab_docker /var/spool/cron/crontabs/docker
 
 # Inicia Cron

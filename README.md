@@ -11,6 +11,7 @@ O Docker Toolbox, deixa o redirecionamento da porta SSH do NAT numa porta alta, 
 ## Configurando seu boot2docker
 Execute
 ```
+sudo su
 wget -qO- https://raw.githubusercontent.com/pierophp/boot2docker/master/install.sh | sh
 ```
 
