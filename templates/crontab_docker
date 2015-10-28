@@ -3,7 +3,7 @@
 */1 * * * * docker ps | grep samba || docker restart samba
 
 #Inicia container RSYNC
-*/1 * * * * docker ps -a | grep rsync || docker run --name rsync -v /home/docker:/home/docker -v /c/docker_bkp:/home/docker_bkp -d bfosberry/rsync
+*/1 * * * * docker ps -a | grep rsync || docker run --name rsync -v /home/docker:/home/docker -v /docker_bkp:/home/docker_bkp -d bfosberry/rsync
 */1 * * * * docker ps | grep rsync || docker restart rsync
 
 # Ativa o rsync para o backup dos arquivos

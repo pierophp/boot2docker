@@ -6,10 +6,15 @@ ln -s  /mnt/sda1/home/docker /home/docker
 # Referencia o docker-compose
 ln -s /mnt/sda1/bin/docker-compose /usr/bin/docker-compose
 
+user=`cat /home/docker/user_windows`
+
+#Link simólico para backup
+ln -s /c/Users/$user/docker_bkp /docker_bkp
+
 # Configura o IP manualmente
 ifconfig eth1 192.168.99.2
 
-#Start Cron
+# Start Cron
 mv /home/docker/crontab_docker /var/spool/cron/crontabs/docker
 
 # Inicia Cron
