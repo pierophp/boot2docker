@@ -1,15 +1,22 @@
+read -p "Qual seu usuário do Windows?" user
+
 #Boo2Docker persistir dados
 echo "Montando /home/docker"
 sudo mkdir -p /mnt/sda1/home/docker/.docker
 sudo mkdir  /mnt/sda1/home/docker/.ssh
-sudo chown -R docker:docker  /mnt/sda1/home/docker
 cp /home/docker/.docker/* /mnt/sda1/home/docker/.docker
 cp /home/docker/.ssh/authorized_keys /mnt/sda1/home/docker/.ssh
 cp /home/docker/.profile /mnt/sda1/home/docker/.profile
 
-read -p "Qual seu usuário do Windows?" user
+#Gravando usuário Windows
 echo $user > /mnt/sda1/home/docker/user_windows
 mkdir /c/Users/$user/docker_bkp
+
+# Apaga o conteúdo antigo da VM
+rm -Rf /home/docker
+
+# Deixa a /home na partição física para não perder os dados
+ln -s  /mnt/sda1/home/docker /home/docker
 
 #Docker Compose
 echo "Instalando Docker Compose"
@@ -28,6 +35,9 @@ chmod +x /var/lib/boot2docker/bootlocal.sh
 echo "Baixando rsync.sh"
 wget https://raw.githubusercontent.com/pierophp/boot2docker/master/templates/rsync.sh -O /home/docker/rsync.sh
 chmod +x /home/docker/rsync.sh
+
+echo "Mudando proprietário da home"
+chown -R docker:docker  //home/docker
 
 #Download Crontab
 echo "Download crontab"
