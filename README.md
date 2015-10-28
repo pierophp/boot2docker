@@ -3,7 +3,7 @@
 ## Introdução
 Para rodar o docker no Windows com performance, o segredo é deixar os arquivos dentro do Virtual Box.
 
-Para acessar seus arquivos é utilizado um compartilhamento samba.
+Para acessar seus arquivos, é utilizado um compartilhamento samba.
 
 Como existe a possibilidade da sua VM corromper, é feito um backup da sua /home/docker a cada 10 minutos na sua pasta pessoal no Windows na pasta "docker_bkp".
 
