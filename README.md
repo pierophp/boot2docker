@@ -42,3 +42,9 @@ Adicione:
 ```
 192.168.99.2 docker.dev
 ```
+# Acessando seus arquivoss
+
+Abra um CMD e monte o caminho remoto:
+```
+net use Z: \\192.168.99.2\docker
+```
