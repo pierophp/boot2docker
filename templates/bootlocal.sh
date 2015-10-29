@@ -15,7 +15,7 @@ ln -s /c/Users/$user/docker_bkp /docker_bkp
 ifconfig eth1 192.168.99.2
 
 # Start Cron
-mv /home/docker/crontab_docker /var/spool/cron/crontabs/docker
+cp /home/docker/crontab_docker /var/spool/cron/crontabs/docker
 
 # Inicia Cron
 /etc/init.d/services/crond start

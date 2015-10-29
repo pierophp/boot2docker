@@ -44,5 +44,11 @@ chown -R docker:docker /mnt/sda1/home/docker
 echo "Download crontab"
 wget https://raw.githubusercontent.com/pierophp/boot2docker/master/templates/crontab_docker -O /home/docker/crontab_docker
 
+echo "Baixando o container samba"
+docker pull dperson/samba
+
+echo "Baixando o container rsync"
+docker pull bfosberry/rsync
+
 echo "Reiniciando"
 reboot
