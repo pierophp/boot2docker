@@ -22,8 +22,8 @@ ln -s  /mnt/sda1/home/docker /home/docker
 #Docker Compose
 echo "Instalando Docker Compose"
 sudo mkdir /mnt/sda1/bin
-wget https://github.com/docker/compose/releases/download/1.4.2/docker-compose-`uname -s`-`uname -m`
-sudo mv docker-compose-Linux-x86_64 /mnt/sda1/bin/docker-compose
+wget https://github.com/docker/compose/releases/download/1.4.2/docker-compose-`uname -s`-`uname -m` -O /home/docker/docker-compose
+sudo mv /home/docker/docker-compose /mnt/sda1/bin/docker-compose
 sudo chmod +x /mnt/sda1/bin/docker-compose
 
 #baixa o script
