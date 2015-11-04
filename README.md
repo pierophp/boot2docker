@@ -14,7 +14,7 @@ Além disso, por padrão o /home/docker é perdido a cada reboot, esse script ta
 ## Instalação
 
 Instale:
-* [Docker Toolbox](https://www.docker.com/toolbox)
+- <a href="https://www.docker.com/toolbox" target="_blank">Docker Toolbox</a>
 
 ## Alteração da porta SSH
 O Docker Toolbox, deixa o redirecionamento da porta SSH do NAT numa porta alta, altere para 2222
