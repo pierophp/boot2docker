@@ -19,6 +19,9 @@ Instale:
 ## Alteração da porta SSH
 O Docker Toolbox, deixa o redirecionamento da porta SSH do NAT numa porta alta, altere para 2222
 
+## Alteração do IP
+Acesse as configurações gerais do Virtual Box, vá em Rede, Redes Exclusivas de Hospedeiro, edite, Servidor DHCP, desmarque a opção Habilitar Servidor.
+
 ## Alias para acessar boot2docker
 
 Abra o Git Bash e adicione isso ao arquivo ~/.bash_profile no WINDOWS ou ~/.profile no MAC
