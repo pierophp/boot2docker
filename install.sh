@@ -1,5 +1,5 @@
 
-read -p "Qual seu usuário do Windows?" user
+read -p "Qual seu usuário da máquina host?" user
 
 #Boo2Docker persistir dados
 echo "Montando /home/docker"
@@ -10,8 +10,9 @@ cp /home/docker/.ssh/authorized_keys /mnt/sda1/home/docker/.ssh
 cp /home/docker/.profile /mnt/sda1/home/docker/.profile
 
 #Gravando usuário Windows
-echo $user > /mnt/sda1/home/docker/user_windows
-mkdir /c/Users/$user/docker_bkp
+echo $user > /mnt/sda1/home/docker/user_host
+test -d /c/Users && ln -s /c/Users /Users
+mkdir /Users/$user/docker_bkp
 
 # Apaga o conteúdo antigo da VM
 rm -Rf /home/docker
