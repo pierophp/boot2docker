@@ -1,13 +1,13 @@
-# Docker no Windows
+# Docker no Windows / MAC
 
 ## Introdução
-Para rodar o docker no Windows com performance, o segredo é deixar os arquivos dentro do Virtual Box.
+Para rodar o docker no Windows / MAC com performance, o segredo é deixar os arquivos dentro do Virtual Box.
 
 Para acessar seus arquivos, é utilizado um compartilhamento samba.
 
-Como existe a possibilidade da sua VM corromper, é feito um backup da sua /home/docker a cada 10 minutos na sua pasta pessoal no Windows na pasta "docker_bkp".
+Como existe a possibilidade da sua VM corromper, é feito um backup da sua /home/docker a cada 10 minutos na sua pasta pessoal no Windows / MAC na pasta "docker_bkp".
 
-Nesse script também é instalado o docker-compose que não vem instalado por padrão no boot2docker para Windows.
+Nesse script também é instalado o docker-compose que não vem instalado por padrão no boot2docker para Windows / MAC.
 
 Além disso, por padrão o /home/docker é perdido a cada reboot, esse script também corrigi isso.
 
@@ -21,14 +21,14 @@ O Docker Toolbox, deixa o redirecionamento da porta SSH do NAT numa porta alta, 
 
 ## Alias para acessar boot2docker
 
-Abra o Git Bash e adicione isso ao arquivo ~/.bash_profile
+Abra o Git Bash e adicione isso ao arquivo ~/.bash_profile no WINDOWS ou ~/.profile no MAC
 
 ```
 alias dssh='ssh -i ~/.docker/machine/machines/default/id_rsa -p 2222 docker@127.0.0.1'
 ```
 
 ## Configurando seu boot2docker
-Execute esse comando dentro do boot2docker (irá pedir seu usuário do Windows):
+Execute esse comando dentro do boot2docker (irá pedir seu usuário do Windows / MAC):
 ```
 sudo wget https://raw.githubusercontent.com/pierophp/boot2docker/master/install.sh -O /install.sh
 sudo chmod +x /install.sh
@@ -44,9 +44,14 @@ cat ~/.ssh/id_rsa.pub
 
 ## Adicionar hostname
 
-Abra o arquivo como administrador:
+Abra o arquivo como administrador no WINDOWS:
 ```
 C:\Windows\System32\Drivers\etc\hosts
+```
+
+Abra o arquivo como administrador no MAC:
+```
+/etc/hosts
 ```
 
 Adicione seus hosts:
