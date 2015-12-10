@@ -63,7 +63,16 @@ Adicione seus hosts:
 ```
 ## Acessando seus arquivos
 
-Abra um CMD e monte o caminho remoto:
+No Windows abra um CMD e monte o caminho remoto:
 ```
 net use Z: \\192.168.99.2\docker
+```
+No MAC, APerte Command + K e digite
+```
+smb://192.168.99.2/docker
+```
+
+Depois acesse em:
+```
+/Volumes/docker/
 ```
