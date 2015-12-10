@@ -6,10 +6,10 @@ ln -s  /mnt/sda1/home/docker /home/docker
 # Referencia o docker-compose
 ln -s /mnt/sda1/bin/docker-compose /usr/bin/docker-compose
 
-user=`cat /home/docker/user_windows`
+user=`cat /home/docker/user_host`
 
 #Link simólico para backup
-ln -s /c/Users/$user/docker_bkp /docker_bkp
+ln -s /Users/$user/docker_bkp /docker_bkp
 
 # Configura o IP manualmente
 ifconfig eth1 192.168.99.2
