@@ -69,6 +69,7 @@ net use Z: \\docker.dev\docker
 ```
 No MAC, execute esse comando:
 ```
+mkdir /Volumes/docker
 mount_smbfs //guest:@docker.dev/docker /Volumes/docker
 ```
 
