@@ -65,11 +65,11 @@ Adicione seus hosts:
 
 No Windows abra um CMD e monte o caminho remoto:
 ```
-net use Z: \\192.168.99.2\docker
+net use Z: \\docker.dev\docker
 ```
-No MAC, APerte Command + K e digite
+No MAC, execute esse comando:
 ```
-smb://192.168.99.2/docker
+mount_smbfs //guest:@docker.dev/docker /Volumes/docker
 ```
 
 Depois acesse em:
