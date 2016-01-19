@@ -23,7 +23,7 @@ ln -s  /mnt/sda1/home/docker /home/docker
 #Docker Compose
 echo "Instalando Docker Compose"
 sudo mkdir /mnt/sda1/bin
-wget https://github.com/docker/compose/releases/download/1.4.2/docker-compose-`uname -s`-`uname -m` -O /home/docker/docker-compose
+wget https://github.com/docker/compose/releases/download/1.5.2/docker-compose-`uname -s`-`uname -m` -O /home/docker/docker-compose
 sudo mv /home/docker/docker-compose /mnt/sda1/bin/docker-compose
 sudo chmod +x /mnt/sda1/bin/docker-compose
 
